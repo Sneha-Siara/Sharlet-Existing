@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharlet Beauty Salon and Spa</title>
+  <meta name="description" content="Hair, facials, bridal makeup, nails, waxing and spa at Sharlet Beauty Salon and Spa. Book on WhatsApp.">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fffaf6;
+      color: #382923;
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    header {
+      background: #f3e3df;
+      padding: 18px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h2 { margin: 0 0 6px; font-family: Georgia, serif; }
+
+    nav a { margin: 0 10px; color: #75474b; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* ---------- HERO (background photo: images/hero.jpg) ---------- */
+    .hero {
+      text-align: center;
+      padding: 110px 20px;
+      color: white;
+      background:
+        linear-gradient(rgba(56, 41, 35, 0.55), rgba(56, 41, 35, 0.55)),
+        url("images/hero.jpg") center / cover no-repeat,
+        #ead1cb;
+    }
+    .hero h1 { font: 48px Georgia, serif; margin: 0 0 15px; }
+    .hero p { font-size: 18px; margin: 0 0 10px; }
+
+    .button {
+      display: inline-block;
+      background: #925b60;
+      color: white;
+      padding: 12px 22px;
+      margin-top: 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button.whatsapp { background: #128c4a; }
+
+    section { padding: 50px 20px; text-align: center; }
+    section h2 { font-family: Georgia, serif; font-size: 32px; margin: 0 0 8px; }
+    .subtitle { max-width: 620px; margin: 0 auto 30px; color: #75474b; }
+
+    /* ---------- SERVICES ---------- */
+    .services {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .service {
+      background: white;
+      border: 1px solid #eadbd5;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: left;
+    }
+    .service img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      background: #ead1cb;
+    }
+    .service .info { padding: 16px 18px 20px; }
+    .service h3 { margin: 0 0 6px; font-family: Georgia, serif; }
+    .service p { margin: 0 0 10px; font-size: 15px; }
+    .service ul { margin: 0; padding-left: 18px; font-size: 14px; color: #75474b; }
+
+    /* ---------- GALLERY ---------- */
+    .gallery {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #ead1cb;
+    }
+
+    #about { background: #f3e3df; }
+    #about p { max-width: 700px; margin: 0 auto 10px; }
+
+    /* ---------- CONTACT ---------- */
+    .contact-box {
+      max-width: 520px;
+      margin: 0 auto;
+      background: white;
+      border: 1px solid #eadbd5;
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .contact-box p { margin: 6px 0; }
+
+    footer { background: #382923; color: white; padding: 22px; text-align: center; }
+    footer p { margin: 0; }
+
+    /* Floating WhatsApp button */
+    .float-whatsapp {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      background: #128c4a;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      z-index: 20;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 70px 20px; }
+      .hero h1 { font-size: 36px; }
+      nav a { display: inline-block; margin: 5px; }
+      header { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Sharlet Beauty Salon and Spa</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <h1>Your Beauty, Our Passion</h1>
+      <p>Discover beauty, elegance and a moment of self-care.</p>
+      <a class="button whatsapp" href="https://wa.me/919740155525?text=Hello%20Sharlet%20Beauty%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <p class="subtitle">From everyday care to your biggest day. Message us on WhatsApp for prices and to choose a time.</p>
+
+      <div class="services">
+
+        <div class="service">
+          <img src="images/hair.jpg" alt="Hair styling at Sharlet Beauty Salon and Spa">
+          <div class="info">
+            <h3>Hair Styling</h3>
+            <p>Cuts and styles that suit your face shape and hair type.</p>
+            <ul>
+              <li>Haircut and blow-dry</li>
+              <li>Party and festive hairstyles</li>
+              <li>Straightening and curls</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/hair-spa.jpg" alt="Hair spa and colour">
+          <div class="info">
+            <h3>Hair Spa &amp; Colour</h3>
+            <p>Nourishing treatments and colour for healthy, shiny hair.</p>
+            <ul>
+              <li>Hair spa and scalp massage</li>
+              <li>Global colour and root touch-up</li>
+              <li>Highlights</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/facial.jpg" alt="Facial and skin care treatment">
+          <div class="info">
+            <h3>Facials &amp; Skin Care</h3>
+            <p>Make time for your skincare routine with treatments for your skin type.</p>
+            <ul>
+              <li>Cleanup and classic facial</li>
+              <li>Glow and brightening facial</li>
+              <li>De-tan treatment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/bridal.jpg" alt="Bridal makeup">
+          <div class="info">
+            <h3>Bridal Makeup</h3>
+            <p>Get ready for your special day with a look planned in advance.</p>
+            <ul>
+              <li>Bridal makeup and hairstyle</li>
+              <li>Engagement and reception looks</li>
+              <li>Saree draping</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/party.jpg" alt="Party makeup">
+          <div class="info">
+            <h3>Party Makeup</h3>
+            <p>Long-lasting makeup for weddings, parties and photo shoots.</p>
+            <ul>
+              <li>Party and function makeup</li>
+              <li>Eye makeup</li>
+              <li>Hairstyle with makeup</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/nails.jpg" alt="Manicure and pedicure">
+          <div class="info">
+            <h3>Manicure &amp; Pedicure</h3>
+            <p>Enjoy a polished, pampering experience for hands and feet.</p>
+            <ul>
+              <li>Manicure and pedicure</li>
+              <li>Nail polish and nail art</li>
+              <li>Foot and hand massage</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/waxing.jpg" alt="Waxing and threading">
+          <div class="info">
+            <h3>Waxing &amp; Threading</h3>
+            <p>Gentle hair removal for smooth, clean skin.</p>
+            <ul>
+              <li>Eyebrow and face threading</li>
+              <li>Arms, legs and full-body waxing</li>
+              <li>Soothing aftercare</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service">
+          <img src="images/spa.jpg" alt="Spa and massage">
+          <div class="info">
+            <h3>Spa &amp; Massage</h3>
+            <p>Relax and recharge in a calm space.</p>
+            <ul>
+              <li>Head, neck and shoulder massage</li>
+              <li>Full body massage</li>
+              <li>Relaxing spa packages</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+      <h2>Our Salon &amp; Work</h2>
+      <p class="subtitle">A look inside our salon and some of our recent work.</p>
+
+      <div class="gallery">
+        <img src="images/gallery1.jpg" alt="Inside Sharlet Beauty Salon and Spa" loading="lazy">
+        <img src="images/gallery2.jpg" alt="Bridal makeup look" loading="lazy">
+        <img src="images/gallery3.jpg" alt="Hair styling result" loading="lazy">
+        <img src="images/gallery4.jpg" alt="Facial treatment" loading="lazy">
+        <img src="images/gallery5.jpg" alt="Nail art" loading="lazy">
+        <img src="images/gallery6.jpg" alt="Spa room" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Our Salon</h2>
+      <p>Welcome to Sharlet Beauty Salon and Spa. We want every visit to feel relaxing, personal and special.</p>
+      <p>Tell us what you have in mind and we will help you choose the right service.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p class="subtitle">Contact us to ask about services and appointments.</p>
+
+      <div class="contact-box">
+        <p><strong>Address:</strong> Near Channasandra, Uttarahalli main road, Rajarajeshwar Nagar 560098.</p>
+        <p><strong>Phone / WhatsApp:</strong> +91 9740155525</p>
+        <p><strong>Hours:</strong> Mon - Sun, 9:30 am to 9:00 pm</p>
+        <a class="button whatsapp" href="https://wa.me/919740155525?text=Hello%20Sharlet%20Beauty%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Sharlet Beauty Salon and Spa</p>
+  </footer>
+
+  <a class="float-whatsapp" href="https://wa.me/919740155525?text=Hello%20Sharlet%20Beauty%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp</a>
+
+</body>
+</html>
